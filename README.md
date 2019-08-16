@@ -3,13 +3,13 @@
 This is a basic implementation of a Neural Information Flow (NIF) model. For all details of the framework, check this paper: 
 
 Seeliger, K., Ambrogioni, L., Güçlütürk, Y., Güçlü, U. & van Gerven,
-M. A. J. (2019). Neural System Identification with Neural Information Flow. bioRxiv 553255; doi: https://doi.org/10.1101/553255
+M. A. J. (2019). **Neural System Identification with Neural Information Flow.** bioRxiv 553255; doi: https://doi.org/10.1101/553255
 
 The code implements NIF on two voxel populations (V1 and V2) from functional MRI data, stimulated by images of six handwritten characters: 
 
 ![Handwritten character stimuli (B R A I N S)](BRAINS.png)
 
-The model consists of two layers, representing information processing inside and between V1 and V2. The layers are connected to the V1 and V2 voxels via observation models based on low-rank tensor decomposition, which will learn spatial and channel receptive fields. *The sole trianing signal for the neural network layers and the observation models comes from the training objective of predicting voxel activity reacting to the stimuli.*
+The model consists of two layers, representing information processing inside and between V1 and V2. The layers are connected to the V1 and V2 voxels via observation models based on low-rank tensor decomposition, which will learn spatial and channel receptive fields. **The sole trianing signal for the neural network layers and the observation models comes from the training objective of predicting voxel activity reacting to the stimuli.** So you e.g. will learn representations directly on your data, and there are no artificial assumptions about visual system training goals (like classifying ImageNet). For MRI you will furthermore learn retinotopy and effective connectivity, all in the same model. 
 
 Although the data set is quite small, quite a few voxels can be predicted with correlations above 0.3. These voxels also produce stable spatial receptive fields. Here are three examples: 
 
