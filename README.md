@@ -9,7 +9,7 @@ The code implements NIF on two voxel populations (V1 and V2) from functional MRI
 
 ![Handwritten character stimuli (B R A I N S)](BRAINS.png)
 
-The model consists of two layers, representing information processing inside and between V1 and V2. The layers are connected to the V1 and V2 voxels via observation models based on low-rank tensor decomposition, which will learn spatial and channel receptive fields. **The sole trianing signal for the neural network layers and the observation models comes from the training objective of predicting voxel activity reacting to the stimuli.** So you e.g. will learn representations directly on your data, and there are no artificial assumptions about visual system training goals (like classifying ImageNet). For MRI you will furthermore learn retinotopy and effective connectivity, all in the same model. 
+The model consists of two layers, representing information processing inside and between V1 and V2. The layers are connected to the V1 and V2 voxels via observation models based on low-rank tensor decomposition, which will learn spatial and channel receptive fields. *The sole trianing signal for the neural network layers and the observation models comes from the training objective of predicting how voxels react to stimuli.* So you e.g. will learn representations directly on your data, and there are no artificial assumptions about visual system training goals (like classifying ImageNet). For MRI you will furthermore learn retinotopy and effective connectivity, all within the same model. 
 
 Although the data set is quite small, quite a few voxels can be predicted with correlations above 0.3. These voxels also produce stable spatial receptive fields. Here are three examples: 
 
