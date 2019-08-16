@@ -9,15 +9,33 @@ The code implements NIF on two voxel populations (V1 and V2) from functional MRI
 
 ![Handwritten character stimuli (B R A I N S)](BRAINS.png)
 
-The model consists of two layers, representing information processing inside and between V1 and V2. The layers are connected to the V1 and V2 voxels via observation models based on low-rank tensor decomposition, which will learn spatial and channel receptive fields. *The sole training signal for the neural network layers and the observation models comes from the training objective of predicting how voxels react to stimuli.* So you e.g. will learn representations directly on your data, and there are no artificial assumptions about visual system learning goals (such as classifying ImageNet). You will furthermore learn retinotopy and effective connectivity, all within the same model. 
+The model consists of two layers, representing information processing inside and between V1 and V2. The layers are connected to the V1 and V2 voxels via observation models based on low-rank tensor decomposition, which will learn voxel-wise spatial and channel receptive fields. *The sole training signal for the neural network layers and the observation models comes from the training objective of predicting how individual voxels react to stimuli.* That means that you will learn representations directly on your data, and that there are no artificial assumptions about visual system learning goals (such as classifying ImageNet). You will furthermore learn retinotopy and effective connectivity, all within the same model. 
 
 Although the data set is quite small, quite a few voxels can be predicted with correlations above 0.3. These voxels also produce stable spatial receptive fields. Here are three examples from V1: 
 
 ![3 spatial receptive fields](spatialRFs.png)
 
-To get rid of the symmetric artefacts, and for learning more complex (multi-pole) receptive fields that exist in MRI data you will need to increase the rank. Every additional rank will add another set of observation weights for every voxel however, so your available number of training samples must permit this. 
+To get rid of the symmetric artefacts, and for learning more complex (multi-pole) receptive fields that exist in MRI data you will need to increase the rank. Every additional rank will add another set of observation weights for every voxel however, so your available amount of training data must permit this. 
 
 The code will also write a few channel weights learned in V1 (however this example uses tiny 3 x 3 channels, so there is not much to see here). The model is not using a retina transform on the input stimuli, however it is recommended (nice recent implementation: https://github.com/dicarlolab/retinawarp ). 
+
+
+Usage notes
+===========
+
+The model is intentionally small so that it will not require a GPU. It will run on a notebook. 
+
+Install chainer with: 
+
+    $ pip install chainer
+    
+(note that chainer and pytorch have highly similar syntax, so you can easily transfer this model to pytorch)
+
+Run with: 
+
+    python train_model.py
+
+A few learned channels and voxel-wise receptive fields will be written into the current directory after every epoch. 
 
 
 Usage conditions
