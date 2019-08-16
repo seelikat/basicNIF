@@ -7,7 +7,7 @@ M. A. J. (2019). Neural System Identification with Neural Information Flow. bioR
 
 The code implements NIF on two voxel populations (V1 and V2) from functional MRI data, stimulated by images of six handwritten characters: 
 
-![Handwritten character stimuli (B R A I N S)](brains.png)
+![Handwritten character stimuli (B R A I N S)](BRAINS.png)
 
 The model consists of two layers, representing information processing inside and between V1 and V2. The layers are connected to the V1 and V2 voxels via observation models based on low-rank tensor decomposition, which will learn spatial and channel receptive fields. *The sole trianing signal for the neural network layers and the observation models comes from the training objective of predicting voxel activity reacting to the stimuli.*
 
