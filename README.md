@@ -9,15 +9,15 @@ The code implements NIF on two voxel populations (V1 and V2) from functional MRI
 
 ![Handwritten character stimuli (B R A I N S)](BRAINS.png)
 
-The model consists of two layers, representing information processing inside and between V1 and V2. The layers are connected to the V1 and V2 voxels via observation models based on low-rank tensor decomposition, which will learn spatial and channel receptive fields. *The sole trianing signal for the neural network layers and the observation models comes from the training objective of predicting how voxels react to stimuli.* So you e.g. will learn representations directly on your data, and there are no artificial assumptions about visual system training goals (like classifying ImageNet). For MRI you will furthermore learn retinotopy and effective connectivity, all within the same model. 
+The model consists of two layers, representing information processing inside and between V1 and V2. The layers are connected to the V1 and V2 voxels via observation models based on low-rank tensor decomposition, which will learn spatial and channel receptive fields. *The sole training signal for the neural network layers and the observation models comes from the training objective of predicting how voxels react to stimuli.* So you e.g. will learn representations directly on your data, and there are no artificial assumptions about visual system learning goals (such as classifying ImageNet). You will furthermore learn retinotopy and effective connectivity, all within the same model. 
 
-Although the data set is quite small, quite a few voxels can be predicted with correlations above 0.3. These voxels also produce stable spatial receptive fields. Here are three examples: 
+Although the data set is quite small, quite a few voxels can be predicted with correlations above 0.3. These voxels also produce stable spatial receptive fields. Here are three examples from V1: 
 
 ![3 spatial receptive fields](spatialRFs.png)
 
 To get rid of the symmetric artefacts, and for learning more complex (multi-pole) receptive fields that exist in MRI data you will need to increase the rank. Every additional rank will add another set of observation weights for every voxel however, so your available number of training samples must permit this. 
 
-The code will also write a few channel weights learned in V1 (though this example uses tiny 3 x 3 channels, you can't read too much from it). The model is not using a retina transform on the input stimuli, however it is recommended (nice recent implementation: https://github.com/dicarlolab/retinawarp ). 
+The code will also write a few channel weights learned in V1 (however this example uses tiny 3 x 3 channels, so there is not much to see here). The model is not using a retina transform on the input stimuli, however it is recommended (nice recent implementation: https://github.com/dicarlolab/retinawarp ). 
 
 
 Usage conditions
@@ -37,4 +37,4 @@ Schoenmakers, S., Barth, M., Heskes, T., & van Gerven, M. (2013). **Linear recon
 
 Schoenmakers, S., Güçlü, U., van Gerven, M., & Heskes, T. (2014). **Gaussian mixture models and semantic gating improve reconstructions from human brain activity.** Frontiers in Computational Neuroscience 8, 173.
 
-In any case, the corresponding authors will appreciate if you notified them. 
+In any case, the corresponding authors will appreciate if you let them know how you made use of their work. 
