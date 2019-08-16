@@ -26,15 +26,15 @@ Usage conditions
 If you publish using this code or use it in any other way, please cite:
 
 Seeliger, K., Ambrogioni, L., Güçlütürk, Y., Güçlü, U. & van Gerven,
-M. A. J. (2019). Neural System Identification with Neural Information Flow. bioRxiv 553255; doi: https://doi.org/10.1101/553255
+M. A. J. (2019). **Neural System Identification with Neural Information Flow.** bioRxiv 553255; doi: https://doi.org/10.1101/553255
 
 The complete BRAINS data set (V1 and V2 stimulated by 6 handwritten characters) is available on Donders Repository: 
 http://hdl.handle.net/11633/di.dcc.DSC_2018.00114_120
 
 When using the complete BRAINS data set or the part extracted for this repository, please refer to the following two articles:
 
-Schoenmakers, S., Barth, M., Heskes, T., & van Gerven, M. (2013). Linear reconstruction of perceived images from human brain activity. NeuroImage 83, 951-961.
+Schoenmakers, S., Barth, M., Heskes, T., & van Gerven, M. (2013). **Linear reconstruction of perceived images from human brain activity.** NeuroImage 83, 951-961.
 
-Schoenmakers, S., Güçlü, U., van Gerven, M., & Heskes, T. (2014). Gaussian mixture models and semantic gating improve reconstructions from human brain activity. Frontiers in Computational Neuroscience 8, 173.
+Schoenmakers, S., Güçlü, U., van Gerven, M., & Heskes, T. (2014). **Gaussian mixture models and semantic gating improve reconstructions from human brain activity.** Frontiers in Computational Neuroscience 8, 173.
 
 In any case, the corresponding authors will appreciate if you notified them. 
