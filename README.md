@@ -3,7 +3,7 @@
 This is a basic implementation of a Neural Information Flow (NIF) model. For all details of the framework, check this paper: 
 
 Seeliger, K., Ambrogioni, L., Güçlütürk, Y., Güçlü, U. & van Gerven,
-M. A. J. (2021). **Neural System Identification with Neural Information Flow.** PLoS Computational Biology. https://doi.org/10.1371/journal.pcbi.1008558
+M. A. J. (2021). **Neural System Identification with Neural Information Flow.** *PLoS Computational Biology*. https://doi.org/10.1371/journal.pcbi.1008558
 
 The code implements NIF on two voxel populations (V1 and V2) from functional MRI data, stimulated by images of six handwritten characters: 
 
