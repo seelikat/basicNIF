@@ -1,5 +1,7 @@
 # basicNIF
 
+[![DOI](https://zenodo.org/badge/190635036.svg)](https://doi.org/10.5281/zenodo.18887847)
+
 This is a basic implementation of a Neural Information Flow (NIF) model. For all details of the framework, check this paper: 
 
 Seeliger, K., Ambrogioni, L., Güçlütürk, Y., Güçlü, U. & van Gerven,
